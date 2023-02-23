@@ -4,4 +4,15 @@
         <%# image_tag "https://source.unsplash.com/featured/?flat&#{rand(1..100)}", class: "card-img-top" %>
       </div>
     <%= link_to 'Back', lists_path(@lists) %>
+    <%= link_to 'add a bookmark',  new_list_bookmark_path(@list) %>
 </div>
+
+<p><strong>Bookmarks</strong></p>
+<ul class="list-group">
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="list-group-item">
+      <%= bookmark.comment %>
+      <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    </li>
+  <% end %>
+</ul>
