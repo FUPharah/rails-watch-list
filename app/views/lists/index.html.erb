@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> List </h1>
+    <%= link_to 'Add a New list', new_list_path, class:'btn-danger' %>
+    <div class="cards">
+      <% @lists.each do |list| %>
+        <div class= "row">
+          <div class= "col-sm-3">
+            <div class="card" style="width: 18rem;">
+              <%# <%= image_tag poster_url, class: "card-img-top" %> 
+              <div class="card-body">
+                <h2 class="card-text"><%= link_to list.name, list_path(list) %></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
