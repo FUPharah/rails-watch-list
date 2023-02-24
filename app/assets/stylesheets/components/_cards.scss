@@ -1,0 +1,13 @@
+.cards {
+  display: grid, flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 24px;
+}
+
+.card {
+  border: 1px solid red;
+  background-color: rgba(0, 255, 255, 0.61);
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
