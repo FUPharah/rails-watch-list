@@ -13,7 +13,7 @@ end
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = @list
     @bookmark.save
-    redirect_to lists_path
+    redirect_to list_path(@list)
   end
 
   def show
@@ -22,8 +22,8 @@ end
 
   def destroy
     @bookmark.destroy
-    @list = List.find(params[:list_id])
-    redirect_to list_path(@list)
+    #@list = List.find(params[:list_id])
+    redirect_to list_path(@bookmark.list), status: :see_other
   end
 
   private

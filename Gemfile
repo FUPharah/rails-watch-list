@@ -70,7 +70,8 @@ gem 'rails-controller-testing', group: [ :test ]
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
-gem "sassc-rails"
 
 gem 'faker'
 gem "pg"
+gem "cloudinary"
+gem "dotenv-rails", groups: [:development, :test]
